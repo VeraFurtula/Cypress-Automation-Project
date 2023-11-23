@@ -9,8 +9,8 @@ export class LoginPage {
 
     loginEnv() {
         cy.get('form').eq(1).then(form => {
-            cy.wrap(form).find('#email').type(Cypress.env('emailEnv'))
-            cy.wrap(form).find('#pass').type(Cypress.env('passwordEnv'))
+            cy.wrap(form).find('#email').type(Cypress.env('EMAIL'))
+            cy.wrap(form).find('#pass').type(Cypress.env('PASSWORD'))
             cy.wrap(form).contains('Sign In').click()
         })
     }

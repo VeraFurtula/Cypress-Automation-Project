@@ -1,6 +1,11 @@
 {
   "devDependencies": {
     "@faker-js/faker": "^8.3.1",
-    "cypress": "^13.6.0"
+    "cypress": "^13.6.0",
+    "cypress-dotenv": "^2.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "scripts": {
+    "test:e2e": "cypress-dotenv run --env-file .env"
   }
 }
