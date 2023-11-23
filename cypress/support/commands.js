@@ -42,3 +42,4 @@ Cypress.Commands.add('generateRandomUserData', () => {
     password: randomPassword,
   };
 });
+

@@ -1,5 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { generateRandomUserData } from '../commands';
+
 export class RegisterPage {
     registerWithValidData() {
         cy.get('form').eq(1).then(form => {

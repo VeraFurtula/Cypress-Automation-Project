@@ -13,6 +13,12 @@ describe("Login Page", () => {
         onLogin.login('verafurtula@gmail.com', 'Levi9Proba')
         onLogin.validateValidCredentials()
       })
+
+      it.only('should sign in with valid data with env', () => {
+        onLogin.validateTheLoginPage()
+        onLogin.loginEnv()
+        onLogin.validateValidCredentials()
+      })
     
     it('should sign in with invalid data for password', () => {
         onLogin.validateTheLoginPage()
@@ -26,7 +32,7 @@ describe("Login Page", () => {
         onLogin.validateInvalidCredentials('The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.')
     })
 
-    it.only('should sign in with blank data', () => {
+    it('should sign in with blank data', () => {
         onLogin.validateTheLoginPage()
         onLogin.login(' ', 'Levi9Proba')
         onLogin.validateInvalidCredentialsBlankDataEmail('This is a required field.')
